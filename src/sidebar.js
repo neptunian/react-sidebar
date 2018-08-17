@@ -316,7 +316,6 @@ class Sidebar extends Component {
       overlayStyle.opacity = 1;
       overlayStyle.visibility = "visible";
     }
-
     if (isTouching || !this.props.transitions) {
       sidebarStyle.transition = "none";
       sidebarStyle.WebkitTransition = "none";
@@ -360,7 +359,7 @@ class Sidebar extends Component {
     return (
       <div {...rootProps}>
         <div
-          className={this.props.sidebarClassName}
+          className={`${this.props.sidebarClassName} ${this.props.open ? 'open' : ''}`}
           style={sidebarStyle}
           ref={this.saveSidebarRef}
           id={this.props.sidebarId}
