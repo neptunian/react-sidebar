@@ -32,8 +32,8 @@ var defaultStyles = {
     position: "absolute",
     top: 0,
     bottom: 0,
-    transition: "transform .3s ease-out",
-    WebkitTransition: "-webkit-transform .3s ease-out",
+    //transition: "transform .3s ease-out",
+    transition: "transform .3s cubic-bezier(1, 1, 0.3, 1.5)",
     willChange: "transform",
     overflowY: "auto",
     boxShadow: "-2px 2px 4px rgba(0, 0, 0, 0.15)"
@@ -235,6 +235,8 @@ function (_Component) {
   };
 
   _proto.render = function render() {
+    console.log(defaultStyles.sidebar);
+
     var sidebarStyle = _objectSpread({}, defaultStyles.sidebar, this.props.styles.sidebar);
 
     var contentStyle = _objectSpread({}, defaultStyles.content, this.props.styles.content);
@@ -344,7 +346,7 @@ function (_Component) {
     }
 
     return React__default.createElement("div", rootProps, React__default.createElement("div", {
-      className: this.props.sidebarClassName + " " + (this.props.open ? 'open' : ''),
+      className: this.props.sidebarClassName,
       style: sidebarStyle,
       ref: this.saveSidebarRef,
       id: this.props.sidebarId
