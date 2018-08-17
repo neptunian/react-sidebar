@@ -360,7 +360,7 @@ class Sidebar extends Component {
     return (
       <div {...rootProps}>
         <div
-          className={`${this.props.sidebarClassName}
+          className={this.props.sidebarClassName}
           style={sidebarStyle}
           ref={this.saveSidebarRef}
           id={this.props.sidebarId}
