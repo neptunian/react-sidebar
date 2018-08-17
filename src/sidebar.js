@@ -21,8 +21,7 @@ const defaultStyles = {
     position: "absolute",
     top: 0,
     bottom: 0,
-    //transition: "transform .3s ease-out",
-    transition: "transform .3s cubic-bezier(1, 1, 0.3, 1.5)",
+    transition: "transform .3s ease-out",
     willChange: "transform",
     overflowY: "auto",
     boxShadow: "-2px 2px 4px rgba(0, 0, 0, 0.15)"
@@ -236,7 +235,6 @@ class Sidebar extends Component {
   }
 
   render() {
-    console.log(defaultStyles.sidebar);
     const sidebarStyle = {
       ...defaultStyles.sidebar,
       ...this.props.styles.sidebar
