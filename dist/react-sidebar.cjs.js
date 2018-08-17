@@ -35,7 +35,8 @@ var defaultStyles = {
     transition: "transform .3s ease-out",
     WebkitTransition: "-webkit-transform .3s ease-out",
     willChange: "transform",
-    overflowY: "auto"
+    overflowY: "auto",
+    boxShadow: "-2px 2px 4px rgba(0, 0, 0, 0.15)"
   },
   content: {
     position: "absolute",
@@ -258,16 +259,16 @@ function (_Component) {
       sidebarStyle.transform = "translateX(100%)";
       sidebarStyle.WebkitTransform = "translateX(100%)";
 
-      if (hasBoxShadow) {
-        sidebarStyle.boxShadow = "-2px 2px 4px rgba(0, 0, 0, 0.15)";
+      if (!hasBoxShadow) {
+        sidebarStyle.boxShadow = "none";
       }
     } else {
       sidebarStyle.left = 0;
       sidebarStyle.transform = "translateX(-100%)";
       sidebarStyle.WebkitTransform = "translateX(-100%)";
 
-      if (hasBoxShadow) {
-        sidebarStyle.boxShadow = "2px 2px 4px rgba(0, 0, 0, 0.15)";
+      if (!hasBoxShadow) {
+        sidebarStyle.boxShadow = "none";
       }
     }
 
