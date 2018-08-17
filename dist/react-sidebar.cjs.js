@@ -344,7 +344,7 @@ function (_Component) {
     }
 
     return React__default.createElement("div", rootProps, React__default.createElement("div", {
-      className: this.props.sidebarClassName,
+      className: this.props.sidebarClassName + " " + (this.props.open ? 'open' : ''),
       style: sidebarStyle,
       ref: this.saveSidebarRef,
       id: this.props.sidebarId

@@ -339,7 +339,7 @@ function (_Component) {
     }
 
     return React.createElement("div", rootProps, React.createElement("div", {
-      className: this.props.sidebarClassName,
+      className: this.props.sidebarClassName + " " + (this.props.open ? 'open' : ''),
       style: sidebarStyle,
       ref: this.saveSidebarRef,
       id: this.props.sidebarId
